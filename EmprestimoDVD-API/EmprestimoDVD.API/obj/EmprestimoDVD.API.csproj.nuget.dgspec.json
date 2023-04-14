@@ -1,0 +1,867 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.API\\EmprestimoDVD.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\Common.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\Common.DataAccess.csproj",
+        "projectName": "Common.DataAccess",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\Common.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj",
+        "projectName": "Common.DTO",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\Common.Functions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\Common.Functions.csproj",
+        "projectName": "Common.Functions",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\Common.Functions.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.32, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj",
+        "projectName": "Common.Infrastructure",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj",
+        "projectName": "Common.Domain",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\Common.Domain.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.API\\EmprestimoDVD.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.API\\EmprestimoDVD.API.csproj",
+        "projectName": "EmprestimoDVD.API",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.API\\EmprestimoDVD.API.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\Common.Functions.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Functions\\Common.Functions.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\EmprestimoDVD.Application.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\EmprestimoDVD.Application.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\EmprestimoDVD.Persistence.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\EmprestimoDVD.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.7.32, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.32, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.32, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\EmprestimoDVD.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\EmprestimoDVD.Application.csproj",
+        "projectName": "EmprestimoDVD.Application",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\EmprestimoDVD.Application.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj",
+        "projectName": "EmprestimoDVD.Domain",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\EmprestimoDVD.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\EmprestimoDVD.DTO.csproj",
+        "projectName": "EmprestimoDVD.DTO",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\EmprestimoDVD.DTO.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj",
+        "projectName": "EmprestimoDVD.Infrastructure",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.Infrastructure\\Common.Infrastructure.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\EmprestimoDVD.DTO.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.DTO\\EmprestimoDVD.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\EmprestimoDVD.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\EmprestimoDVD.Persistence.csproj",
+        "projectName": "EmprestimoDVD.Persistence",
+        "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\EmprestimoDVD.Persistence.csproj",
+        "packagesPath": "C:\\Users\\ujipe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ujipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\Common.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DataAccess\\Common.DataAccess.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Domain\\EmprestimoDVD.Domain.csproj"
+              },
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\EmprestimoDVD.Infrastructure\\EmprestimoDVD.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

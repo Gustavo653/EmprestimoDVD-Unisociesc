@@ -1,0 +1,15 @@
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\bin\Debug\net7.0\EmprestimoDVD.DTO.deps.json
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\bin\Debug\net7.0\EmprestimoDVD.DTO.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\bin\Debug\net7.0\EmprestimoDVD.DTO.pdb
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\bin\Debug\net7.0\EmprestimoDVD.Domain.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\bin\Debug\net7.0\EmprestimoDVD.Domain.pdb
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.csproj.AssemblyReference.cache
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.AssemblyInfoInputs.cache
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.AssemblyInfo.cs
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.csproj.CoreCompileInputs.cache
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.csproj.CopyComplete
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\refint\EmprestimoDVD.DTO.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\EmprestimoDVD.DTO.pdb
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\EmprestimoDVD.DTO\obj\Debug\net7.0\ref\EmprestimoDVD.DTO.dll

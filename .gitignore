@@ -1,0 +1,62 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+# Ignore compiled C# files
+*.dll
+*.exe
+*.pdb
+
+# Ignore Visual Studio and JetBrains IDE files
+*.suo
+*.user
+*.sln
+*.csproj
+*.csproj.user
+*.suo
+*.obj
+*.bin
+*.cache
+*.dll
+*.exe
+*.pdb
+*.bak
+*.userprefs
+*.tmp
+*.log
+*.vs/
+
+# Ignore NuGet packages
+*.nuget/
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore ReSharper files
+_ReSharper*/
+*.ReSharper*
+*.DotSettings.user
+*.resharper.user
+
+# Ignore build output and temp files
+/bin/
+/obj/
+*.swp
+*.swo
+*.tmp
+*.userprefs
+
+# Ignore other C# related files and folders
+*.csproj.bak
+*.csproj.user.bak
+*.csproj.bak.*
+*.csproj.user.bak.*
+*.snk
+*.snk.bak
+*.csproj.nuget.cache
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.dll.config
+*.exe.config
+*.TestResults/
+
