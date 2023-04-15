@@ -37,10 +37,10 @@ namespace EmprestimoDVD.API
             services.AddTransient<IAmigoRepository, AmigoRepository>();
             services.AddTransient<IDVDRepository, DVDRepository>();
             services.AddTransient<IEmprestimoRepository, EmprestimoRepository>();
-            services.AddTransient<IFaixaEtariaRepository, FaixaEtariaRepository>();
             services.AddTransient<IGeneroRepository, GeneroRepository>();
             services.AddTransient<IGeneroService, GeneroService>();
             services.AddTransient<IPessoaRepository, PessoaRepository>();
+            services.AddTransient<IPessoaService, PessoaService>();
 
             services.AddControllers()
                     .AddJsonOptions(options =>

@@ -9,7 +9,6 @@ namespace EmprestimoDVD.Persistence
         public DbSet<Amigo> Amigo { get; set; }
         public DbSet<DVD> DVD { get; set; }
         public DbSet<Emprestimo> Emprestimo { get; set; }
-        public DbSet<FaixaEtaria> FaixaEtaria { get; set; }
         public DbSet<Genero> Genero { get; set; }
         public DbSet<Pessoa> Pessoa { get; set; }
         public EmprestimoDVDContext(DbContextOptions<EmprestimoDVDContext> options) : base(options) { }
@@ -19,7 +18,6 @@ namespace EmprestimoDVD.Persistence
 
             modelBuilder.ApplyConfiguration(new DVDConfig());
             modelBuilder.ApplyConfiguration(new EmprestimoConfig());
-            modelBuilder.ApplyConfiguration(new FaixaEtariaConfig());
             modelBuilder.ApplyConfiguration(new GeneroConfig());
             modelBuilder.ApplyConfiguration(new PessoaConfig());
         }
