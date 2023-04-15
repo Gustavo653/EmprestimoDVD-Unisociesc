@@ -1,4 +1,6 @@
+using EmprestimoDVD.Application;
 using EmprestimoDVD.Infrastructure.Repository;
+using EmprestimoDVD.Infrastructure.Service;
 using EmprestimoDVD.Persistence;
 using EmprestimoDVD.Persistence.Repository;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +39,7 @@ namespace EmprestimoDVD.API
             services.AddTransient<IEmprestimoRepository, EmprestimoRepository>();
             services.AddTransient<IFaixaEtariaRepository, FaixaEtariaRepository>();
             services.AddTransient<IGeneroRepository, GeneroRepository>();
+            services.AddTransient<IGeneroService, GeneroService>();
             services.AddTransient<IPessoaRepository, PessoaRepository>();
 
             services.AddControllers()

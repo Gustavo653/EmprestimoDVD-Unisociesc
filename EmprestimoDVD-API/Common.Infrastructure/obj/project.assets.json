@@ -44,6 +44,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Common.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.DTO.dll": {}
+        }
       }
     }
   },
@@ -114,10 +124,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Common.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Common.DTO/Common.DTO.csproj",
+      "msbuildProject": "../Common.DTO/Common.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Common.DTO >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17"
     ]
   },
@@ -153,7 +169,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj": {
+              "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

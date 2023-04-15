@@ -34,3 +34,6 @@ C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\obj\Debug\net7.0\refint\Common.Infrastructure.dll
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\obj\Debug\net7.0\Common.Infrastructure.pdb
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\obj\Debug\net7.0\ref\Common.Infrastructure.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\bin\Debug\net7.0\Common.DTO.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\bin\Debug\net7.0\Common.DTO.pdb
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Infrastructure\obj\Debug\net7.0\Common.Infrastructure.csproj.CopyComplete

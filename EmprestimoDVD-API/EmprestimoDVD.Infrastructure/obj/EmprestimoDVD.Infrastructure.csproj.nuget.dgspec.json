@@ -92,7 +92,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj": {
+                "projectPath": "C:\\Users\\ujipe\\OneDrive\\Documentos\\GitHub\\EmprestimoDVD-Unisociesc\\EmprestimoDVD-API\\Common.DTO\\Common.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

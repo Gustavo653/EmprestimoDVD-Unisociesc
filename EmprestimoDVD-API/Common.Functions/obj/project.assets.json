@@ -658,10 +658,21 @@
           "bin/placeholder/Common.Domain.dll": {}
         }
       },
+      "Common.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Common.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.DTO.dll": {}
+        }
+      },
       "Common.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Common.DTO": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17"
         },
         "compile": {
@@ -1459,6 +1470,11 @@
       "type": "project",
       "path": "../Common.Models/Common.Domain.csproj",
       "msbuildProject": "../Common.Models/Common.Domain.csproj"
+    },
+    "Common.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Common.DTO/Common.DTO.csproj",
+      "msbuildProject": "../Common.DTO/Common.DTO.csproj"
     },
     "Common.Infrastructure/1.0.0": {
       "type": "project",

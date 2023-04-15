@@ -49,3 +49,5 @@ C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Functions\obj\Debug\net7.0\refint\Common.Functions.dll
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Functions\obj\Debug\net7.0\Common.Functions.pdb
 C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Functions\obj\Debug\net7.0\ref\Common.Functions.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Functions\bin\Debug\net7.0\Common.DTO.dll
+C:\Users\ujipe\OneDrive\Documentos\GitHub\EmprestimoDVD-Unisociesc\EmprestimoDVD-API\Common.Functions\bin\Debug\net7.0\Common.DTO.pdb

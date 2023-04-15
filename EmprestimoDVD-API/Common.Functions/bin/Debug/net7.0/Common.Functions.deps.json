@@ -435,8 +435,14 @@
           "Common.Domain.dll": {}
         }
       },
+      "Common.DTO/1.0.0": {
+        "runtime": {
+          "Common.DTO.dll": {}
+        }
+      },
       "Common.Infrastructure/1.0.0": {
         "dependencies": {
+          "Common.DTO": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17"
         },
         "runtime": {
@@ -704,6 +710,11 @@
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
     },
     "Common.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Common.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,6 @@
 using AutoMapper;
+using EmprestimoDVD.Domain.Entidades;
+using EmprestimoDVD.DTO;
 
 namespace EmprestimoDVD.Infrastructure
 {
@@ -6,7 +8,7 @@ namespace EmprestimoDVD.Infrastructure
     {
         public EmprestimoDVDProfile()
         {
-
+            CreateMap<Genero, GeneroDTO>(MemberList.None).ReverseMap();
         }
     }
 }
