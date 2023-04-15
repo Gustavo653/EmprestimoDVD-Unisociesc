@@ -1,6 +1,6 @@
 ﻿using Common.DataAccess;
 using EmprestimoDVD.Domain.Entidades;
-using EmprestimoDVD.Persistence.Interface;
+using EmprestimoDVD.Infrastructure.Repository;
 
 namespace EmprestimoDVD.Persistence.Repository
 {

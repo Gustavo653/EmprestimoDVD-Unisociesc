@@ -18,4 +18,8 @@
     <ProjectReference Include="..\EmprestimoDVD.DTO\EmprestimoDVD.DTO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Service\" />
+  </ItemGroup>
+
 </Project>

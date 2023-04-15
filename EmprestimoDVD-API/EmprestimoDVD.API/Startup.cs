@@ -1,5 +1,5 @@
+using EmprestimoDVD.Infrastructure.Repository;
 using EmprestimoDVD.Persistence;
-using EmprestimoDVD.Persistence.Interface;
 using EmprestimoDVD.Persistence.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

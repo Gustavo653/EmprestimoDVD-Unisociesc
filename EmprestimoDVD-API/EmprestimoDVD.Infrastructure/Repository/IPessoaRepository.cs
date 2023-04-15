@@ -1,7 +1,7 @@
 ﻿using Common.Infrastructure;
 using EmprestimoDVD.Domain.Entidades;
 
-namespace EmprestimoDVD.Persistence.Interface
+namespace EmprestimoDVD.Infrastructure.Repository
 {
     public interface IPessoaRepository : IRepositoryBase<Pessoa>
     {
