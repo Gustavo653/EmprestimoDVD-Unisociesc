@@ -1,5 +1,6 @@
-using Common.Functions;
-using Hangfire;
+using EmprestimoDVD.Persistence;
+using EmprestimoDVD.Persistence.Interface;
+using EmprestimoDVD.Persistence.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using EmprestimoDVD.DataAccess;
 using System;
 using System.Text.Json.Serialization;
 
@@ -25,8 +25,19 @@ namespace EmprestimoDVD.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<EmprestimoDVDContext>(
-                context => context.UseSqlServer(Configuration.GetConnectionString("Default"), b => b.MigrationsAssembly("EmprestimoDVD.API"))
+                context => context.UseSqlServer(Environment.GetEnvironmentVariable("database") ?? Configuration.GetConnectionString("database"),
+                                                b =>
+                                                {
+                                                    b.MigrationsAssembly("EmprestimoDVD.Persistence");
+                                                })
             );
+
+            services.AddTransient<IAmigoRepository, AmigoRepository>();
+            services.AddTransient<IDVDRepository, DVDRepository>();
+            services.AddTransient<IEmprestimoRepository, EmprestimoRepository>();
+            services.AddTransient<IFaixaEtariaRepository, FaixaEtariaRepository>();
+            services.AddTransient<IGeneroRepository, GeneroRepository>();
+            services.AddTransient<IPessoaRepository, PessoaRepository>();
 
             services.AddControllers()
                     .AddJsonOptions(options =>

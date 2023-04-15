@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EmprestimoDVD.Domain;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using EmprestimoDVD.Domain;
 
-namespace EmprestimoDVD.DataAccess.Configuration
+namespace EmprestimoDVD.Persistence
 {
     public abstract class BaseEntityConfig<TType> : IEntityTypeConfiguration<TType> where TType : BaseEntity
     {
