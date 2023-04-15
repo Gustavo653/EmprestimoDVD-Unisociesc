@@ -8,9 +8,10 @@ namespace EmprestimoDVD.Infrastructure
     {
         public EmprestimoDVDProfile()
         {
+            CreateMap<Amigo, AmigoDTO>(MemberList.None).ReverseMap();
+            CreateMap<DVD, DVDDTO>(MemberList.None).ReverseMap();
             CreateMap<Genero, GeneroDTO>(MemberList.None).ReverseMap();
             CreateMap<Pessoa, PessoaDTO>(MemberList.None).ReverseMap();
-            CreateMap<Amigo, AmigoDTO>(MemberList.None).ReverseMap();
         }
     }
 }

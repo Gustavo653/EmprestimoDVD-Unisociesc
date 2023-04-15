@@ -37,6 +37,7 @@ namespace EmprestimoDVD.API
             services.AddTransient<IAmigoRepository, AmigoRepository>();
             services.AddTransient<IAmigoService, AmigoService>();
             services.AddTransient<IDVDRepository, DVDRepository>();
+            services.AddTransient<IDVDService, DVDService>();
             services.AddTransient<IEmprestimoRepository, EmprestimoRepository>();
             services.AddTransient<IGeneroRepository, GeneroRepository>();
             services.AddTransient<IGeneroService, GeneroService>();
