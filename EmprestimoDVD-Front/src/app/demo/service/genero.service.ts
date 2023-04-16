@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BaseService } from './base.service';
-import { pessoa } from '../api/pessoa';
+import { genero } from '../api/genero';
 
 @Injectable()
-export class PessoaService extends BaseService<pessoa> {
+export class GeneroService extends BaseService<genero> {
     constructor(http: HttpClient) {
-        super(http, 'pessoa');
+        super(http, 'genero');
     }
 }

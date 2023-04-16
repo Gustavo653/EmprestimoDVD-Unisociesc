@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppLayoutModule } from './layout/app.layout.module';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { PessoaService } from './demo/service/pessoa.service';
+import { GeneroService } from './demo/service/genero.service';
 
 @NgModule({
     declarations: [AppComponent, NotfoundComponent],
@@ -12,6 +13,7 @@ import { PessoaService } from './demo/service/pessoa.service';
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         PessoaService,
+        GeneroService
     ],
     bootstrap: [AppComponent],
 })

@@ -25,6 +25,13 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                     './demo/components/pessoa/pessoa.module'
                                 ).then((m) => m.PessoaModule),
                         },
+                        {
+                            path: 'genero',
+                            loadChildren: () =>
+                                import(
+                                    './demo/components/genero/genero.module'
+                                ).then((m) => m.GeneroModule),
+                        },
                     ],
                 },
                 {

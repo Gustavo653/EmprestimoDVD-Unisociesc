@@ -1,0 +1,169 @@
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+
+<p-dialog
+    [(visible)]="generoDialog"
+    header="Detalhes do gênero"
+    [transitionOptions]="'100ms'"
+    [modal]="true"
+    styleClass="p-fluid"
+>
+    <ng-template pTemplate="content">
+        <div class="field">
+            <label for="descricao">Descrição</label>
+            <input
+                type="text"
+                pInputText
+                id="descricao"
+                [(ngModel)]="genero.descricao"
+                required
+                autofocus
+            />
+            <small class="p-error" *ngIf="submitted && !genero.descricao"
+                >Descrição é obrigatório.</small
+            >
+        </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button
+            pButton
+            pRipple
+            label="Cancelar"
+            icon="pi pi-times"
+            class="p-button-text"
+            (click)="hideDialog()"
+        ></button>
+        <button
+            pButton
+            pRipple
+            label="Salvar"
+            icon="pi pi-check"
+            class="p-button-text"
+            (click)="saveGenero()"
+        ></button>
+    </ng-template>
+</p-dialog>
+
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <p-toolbar styleClass="mb-4 gap-2">
+                <ng-template pTemplate="left">
+                    <button
+                        pButton
+                        pRipple
+                        label="Novo"
+                        icon="pi pi-plus"
+                        class="p-button-success mr-2"
+                        (click)="openNew()"
+                    ></button>
+                </ng-template>
+                <ng-template pTemplate="right">
+                    <h5>Pessoa</h5>
+                </ng-template>
+            </p-toolbar>
+
+            <p-table
+                #dtSale
+                [rows]="10"
+                [rowsPerPageOptions]="[10, 25, 50, 100]"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Exibindo {first} de {last} registros / Total: {totalRecords} registros"
+                [reorderableColumns]="true"
+                [loading]="loading"
+                [rowHover]="true"
+                styleClass="p-datatable-gridlines"
+                [paginator]="true"
+                [columns]="cols"
+                [value]="generos"
+                [resizableColumns]="true"
+                columnResizeMode="expand"
+                scrollHeight="flex"
+                responsiveLayout="stack"
+                [globalFilterFields]="['nome']"
+            >
+                <ng-template pTemplate="caption">
+                    <div
+                        class="flex justify-content-between flex-column sm:flex-row"
+                    >
+                        <button
+                            pButton
+                            label="Limpar"
+                            class="p-button-outlined mb-2"
+                            icon="pi pi-filter-slash"
+                            (click)="clear(dtSale)"
+                        ></button>
+                        <span class="p-input-icon-left mb-2">
+                            <i class="pi pi-search"></i>
+                            <input
+                                pInputText
+                                type="text"
+                                #filter
+                                (input)="onGlobalFilter(dtSale, $event)"
+                                placeholder="Buscar palavra-chave"
+                                class="w-full"
+                            />
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th
+                            pReorderableColumn
+                            pResizableColumn
+                            *ngFor="let col of columns"
+                        >
+                            <div
+                                class="flex justify-content-between align-items-center"
+                            >
+                                {{ col.header }}
+                                <p-columnFilter
+                                    [type]="col.type"
+                                    [field]="col.field"
+                                    display="menu"
+                                    placeholder="Buscar por {{ col.header }}"
+                                ></p-columnFilter>
+                            </div>
+                        </th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <td *ngFor="let col of columns">
+                            <span class="p-column-title">{{ col.header }}</span>
+                            {{
+                                col.date
+                                    ? (_(rowData, col.field)
+                                      | date : col.format)
+                                    : col.currency
+                                    ? (_(rowData, col.field)
+                                      | currency : col.coin)
+                                    : _(rowData, col.field)
+                            }}
+                        </td>
+                        <td class="text-center">
+                            <div class="p-buttonset">
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-warning"
+                                    (click)="editGenero(rowData)"
+                                ></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-trash"
+                                    class="p-button-rounded p-button-danger"
+                                    (click)="deleteGenero(rowData)"
+                                ></button>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
