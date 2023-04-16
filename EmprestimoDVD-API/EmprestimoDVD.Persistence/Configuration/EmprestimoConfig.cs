@@ -10,7 +10,7 @@ namespace EmprestimoDVD.Persistence.Configuration
             base.Configure(builder);
 
             builder.Property(x => x.DataEmprestimo).IsRequired();
-            builder.Property(x => x.DataDevolver).IsRequired();
+            builder.Property(x => x.DataDevolver);
         }
     }
 }
