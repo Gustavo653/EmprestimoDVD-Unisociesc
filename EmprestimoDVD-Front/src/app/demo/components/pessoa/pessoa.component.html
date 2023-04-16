@@ -2,70 +2,25 @@
 <p-confirmDialog></p-confirmDialog>
 
 <p-dialog
-    [(visible)]="ticketDialog"
-    header="Detalhes do ticket"
+    [(visible)]="pessoaDialog"
+    header="Detalhes da pessoa"
     [transitionOptions]="'100ms'"
     [modal]="true"
     styleClass="p-fluid"
 >
     <ng-template pTemplate="content">
         <div class="field">
-            <label for="protocol">Protocolo</label>
+            <label for="nome">Nome</label>
             <input
                 type="text"
                 pInputText
-                id="protocol"
-                [(ngModel)]="ticket.protocol"
+                id="nome"
+                [(ngModel)]="pessoa.nome"
                 required
                 autofocus
             />
-            <small class="p-error" *ngIf="submitted && !ticket.protocol"
-                >Protocolo é obrigatório.</small
-            >
-        </div>
-        <div class="field">
-            <label for="subject">Assunto</label>
-            <input
-                type="text"
-                pInputText
-                id="subject"
-                [(ngModel)]="ticket.subject"
-                required
-                autofocus
-            />
-            <small class="p-error" *ngIf="submitted && !ticket.subject"
-                >Assunto é obrigatório.</small
-            >
-        </div>
-
-        <div class="field">
-            <label for="complexity">Complexidade</label>
-            <p-dropdown
-                [(ngModel)]="ticket.complexity"
-                inputId="complexity"
-                [options]="complexity"
-                placeholder="Selecione"
-                appendTo="body"
-                [required]="true"
-            >
-            </p-dropdown>
-            <small class="p-error" *ngIf="submitted && !ticket.complexity"
-                >Complexidade é obrigatória.</small
-            >
-        </div>
-        <div class="field">
-            <label for="priority">Prioridade</label>
-            <p-dropdown
-                [(ngModel)]="ticket.priority"
-                inputId="priority"
-                [options]="priority"
-                placeholder="Selecione"
-                appendTo="body"
-                [required]="true"
-            >
-            </p-dropdown>
-            <small class="p-error" *ngIf="submitted && !ticket.priority"
-                >Prioridade é obrigatória.</small
+            <small class="p-error" *ngIf="submitted && !pessoa.nome"
+                >Nome é obrigatório.</small
             >
         </div>
     </ng-template>
@@ -85,7 +40,7 @@
             label="Salvar"
             icon="pi pi-check"
             class="p-button-text"
-            (click)="saveTicket()"
+            (click)="savePessoa()"
         ></button>
     </ng-template>
 </p-dialog>
@@ -103,15 +58,9 @@
                         class="p-button-success mr-2"
                         (click)="openNew()"
                     ></button>
-                    <button
-                        pButton
-                        pRipple
-                        label="Apagar"
-                        icon="pi pi-trash"
-                        class="p-button-danger"
-                        (click)="deleteSelectedTickets()"
-                        [disabled]="!selectedTickets || !selectedTickets.length"
-                    ></button>
+                </ng-template>
+                <ng-template pTemplate="right">
+                    <h5>Pessoa</h5>
                 </ng-template>
             </p-toolbar>
 
@@ -124,25 +73,15 @@
                 [reorderableColumns]="true"
                 [loading]="loading"
                 [rowHover]="true"
-                [(selection)]="selectedTickets"
                 styleClass="p-datatable-gridlines"
                 [paginator]="true"
-                [columns]="_selectedColumns"
-                sortMode="multiple"
-                [value]="tickets"
+                [columns]="cols"
+                [value]="pessoas"
                 [resizableColumns]="true"
                 columnResizeMode="expand"
-                responsiveLayout="scroll"
-                [globalFilterFields]="[
-                    'protocol',
-                    'subject',
-                    'changedBy',
-                    'createdBy',
-                    'changedDate',
-                    'createdDate',
-                    'priority',
-                    'complexity'
-                ]"
+                scrollHeight="flex"
+                responsiveLayout="stack"
+                [globalFilterFields]="['nome']"
             >
                 <ng-template pTemplate="caption">
                     <div
@@ -155,14 +94,6 @@
                             icon="pi pi-filter-slash"
                             (click)="clear(dtSale)"
                         ></button>
-                        <p-multiSelect
-                            [options]="cols"
-                            [(ngModel)]="selectedColumns"
-                            optionLabel="header"
-                            selectedItemsLabel="{0} colunas selecionadas"
-                            [style]="{ 'min-width': '200px' }"
-                            placeholder="Escolha as colunas"
-                        ></p-multiSelect>
                         <span class="p-input-icon-left mb-2">
                             <i class="pi pi-search"></i>
                             <input
@@ -178,9 +109,6 @@
                 </ng-template>
                 <ng-template pTemplate="header" let-columns>
                     <tr>
-                        <th style="width: 4rem">
-                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                        </th>
                         <th
                             pReorderableColumn
                             pResizableColumn
@@ -203,12 +131,8 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-rowData let-columns="columns">
                     <tr>
-                        <td>
-                            <p-tableCheckbox
-                                [value]="rowData"
-                            ></p-tableCheckbox>
-                        </td>
                         <td *ngFor="let col of columns">
+                            <span class="p-column-title">{{ col.header }}</span>
                             {{
                                 col.date
                                     ? (_(rowData, col.field)
@@ -219,21 +143,23 @@
                                     : _(rowData, col.field)
                             }}
                         </td>
-                        <td>
-                            <button
-                                pButton
-                                pRipple
-                                icon="pi pi-pencil"
-                                class="p-button-rounded p-button-success mr-2"
-                                (click)="editTicket(rowData)"
-                            ></button>
-                            <button
-                                pButton
-                                pRipple
-                                icon="pi pi-trash"
-                                class="p-button-rounded p-button-warning"
-                                (click)="deleteTicket(rowData)"
-                            ></button>
+                        <td class="text-center">
+                            <div class="p-buttonset">
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-warning"
+                                    (click)="editPessoa(rowData)"
+                                ></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-trash"
+                                    class="p-button-rounded p-button-danger"
+                                    (click)="deletePessoa(rowData)"
+                                ></button>
+                            </div>
                         </td>
                     </tr>
                 </ng-template>

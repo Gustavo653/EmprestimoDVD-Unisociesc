@@ -19,11 +19,11 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                 ).then((m) => m.DashboardModule),
                         },
                         {
-                            path: 'ticket',
+                            path: 'pessoa',
                             loadChildren: () =>
                                 import(
-                                    './demo/components/ticket/ticket.module'
-                                ).then((m) => m.TicketModule),
+                                    './demo/components/pessoa/pessoa.module'
+                                ).then((m) => m.PessoaModule),
                         },
                     ],
                 },

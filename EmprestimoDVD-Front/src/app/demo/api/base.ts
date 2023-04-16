@@ -1,7 +1,6 @@
 export interface base<T> {
     code: number;
     message: string;
-    database: string;
     date: Date;
     object: T;
     error: {
