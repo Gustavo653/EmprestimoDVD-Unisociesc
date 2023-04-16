@@ -32,6 +32,13 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                     './demo/components/genero/genero.module'
                                 ).then((m) => m.GeneroModule),
                         },
+                        {
+                            path: 'amigo',
+                            loadChildren: () =>
+                                import(
+                                    './demo/components/amigo/amigo.module'
+                                ).then((m) => m.AmigoModule),
+                        },
                     ],
                 },
                 {

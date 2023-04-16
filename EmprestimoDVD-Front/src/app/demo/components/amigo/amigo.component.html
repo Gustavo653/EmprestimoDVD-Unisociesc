@@ -2,25 +2,68 @@
 <p-confirmDialog></p-confirmDialog>
 
 <p-dialog
-    [(visible)]="generoDialog"
-    header="Detalhes do gênero"
+    [(visible)]="amigoDialog"
+    header="Detalhes do amigo"
     [transitionOptions]="'100ms'"
+    [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
+    [style]="{ width: '30vw' }"
     [modal]="true"
     styleClass="p-fluid"
 >
     <ng-template pTemplate="content">
         <div class="field">
-            <label for="descricao">Descrição</label>
+            <label for="nome">Nome</label>
             <input
                 type="text"
                 pInputText
-                id="descricao"
-                [(ngModel)]="genero.descricao"
+                id="nome"
+                [(ngModel)]="amigo.nome"
                 required
                 autofocus
             />
-            <small class="p-error" *ngIf="submitted && !genero.descricao"
-                >Descrição é obrigatório.</small
+            <small class="p-error" *ngIf="submitted && !amigo.nome"
+                >Nome é obrigatório.</small
+            >
+        </div>
+        <div class="field">
+            <label for="numTelefone">Número Telefone</label>
+            <input
+                type="number"
+                pInputText
+                id="numTelefone"
+                [(ngModel)]="amigo.numTelefone"
+                required
+                autofocus
+            />
+            <small class="p-error" *ngIf="submitted && !amigo.numTelefone"
+                >Número Telefone é obrigatório.</small
+            >
+        </div>
+        <div class="field">
+            <label for="email">E-mail</label>
+            <input
+                type="text"
+                pInputText
+                id="email"
+                [(ngModel)]="amigo.email"
+                required
+                autofocus
+            />
+            <small class="p-error" *ngIf="submitted && !amigo.email"
+                >E-mail é obrigatório.</small
+            >
+        </div>
+        <div class="field">
+            <label for="dataNascimento">Data Nascimento</label>
+            <p-calendar
+                name="dataNascimento"
+                dateFormat="dd/mm/yy"
+                [inline]="true"
+                [(ngModel)]="amigo.dataNascimento"
+            >
+            </p-calendar>
+            <small class="p-error" *ngIf="submitted && !amigo.dataNascimento"
+                >Data Nascimento é obrigatório.</small
             >
         </div>
     </ng-template>
@@ -40,7 +83,7 @@
             label="Salvar"
             icon="pi pi-check"
             class="p-button-text"
-            (click)="saveGenero()"
+            (click)="saveAmigo()"
         ></button>
     </ng-template>
 </p-dialog>
@@ -60,7 +103,7 @@
                     ></button>
                 </ng-template>
                 <ng-template pTemplate="right">
-                    <h5>Pessoa</h5>
+                    <h5>Amigo</h5>
                 </ng-template>
             </p-toolbar>
 
@@ -76,12 +119,12 @@
                 styleClass="p-datatable-gridlines"
                 [paginator]="true"
                 [columns]="cols"
-                [value]="generos"
+                [value]="amigos"
                 [resizableColumns]="true"
                 columnResizeMode="expand"
                 scrollHeight="flex"
                 responsiveLayout="stack"
-                [globalFilterFields]="['descricao']"
+                [globalFilterFields]="['nome']"
             >
                 <ng-template pTemplate="caption">
                     <div
@@ -150,14 +193,14 @@
                                     pRipple
                                     icon="pi pi-pencil"
                                     class="p-button-rounded p-button-warning"
-                                    (click)="editGenero(rowData)"
+                                    (click)="editAmigo(rowData)"
                                 ></button>
                                 <button
                                     pButton
                                     pRipple
                                     icon="pi pi-trash"
                                     class="p-button-rounded p-button-danger"
-                                    (click)="deleteGenero(rowData)"
+                                    (click)="deleteAmigo(rowData)"
                                 ></button>
                             </div>
                         </td>
