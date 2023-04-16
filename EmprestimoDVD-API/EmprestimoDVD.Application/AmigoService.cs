@@ -17,11 +17,15 @@ namespace EmprestimoDVD.Application
     {
         private readonly IAmigoRepository _amigoRepository;
         private readonly IMapper _mapper;
+        private readonly IEmprestimoRepository _emprestimoRepository;
 
-        public AmigoService(IAmigoRepository amigoRepository, IMapper mapper)
+        public AmigoService(IAmigoRepository amigoRepository,
+                            IMapper mapper,
+                            IEmprestimoRepository emprestimoRepository)
         {
             _amigoRepository = amigoRepository;
             _mapper = mapper;
+            _emprestimoRepository = emprestimoRepository;
         }
 
         public async Task<ResponseDTO<Amigo>> CreateOrUpdate(int? id, AmigoDTO dto)
@@ -59,6 +63,8 @@ namespace EmprestimoDVD.Application
                 var entity = await _amigoRepository.GetEntities().FirstOrDefaultAsync(x => x.Id == id) ??
                              throw new Exception("Registro não encotrado!");
                 responseDTO.Object = entity;
+                if (await _emprestimoRepository.GetEntities().AnyAsync(x => x.Amigo == entity))
+                    throw new Exception("Este usuário já pegou um DVD emprestado, e não pode ser excluído.");
                 _amigoRepository.Delete(entity);
                 await _amigoRepository.SaveChangesAsync();
             }

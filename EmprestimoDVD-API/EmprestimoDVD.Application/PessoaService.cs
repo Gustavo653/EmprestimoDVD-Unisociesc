@@ -72,7 +72,7 @@ namespace EmprestimoDVD.Application
             ResponseDTO<IEnumerable<Pessoa>> responseDTO = new();
             try
             {
-                var entity = await _pessoaRepository.GetListAsync();
+                var entity = await _pessoaRepository.GetAllPessoa();
                 responseDTO.Object = entity;
             }
             catch (Exception ex)
@@ -87,7 +87,7 @@ namespace EmprestimoDVD.Application
             ResponseDTO<Pessoa> responseDTO = new();
             try
             {
-                var entity = await _pessoaRepository.GetEntities().FirstOrDefaultAsync(x => x.Id == id) ??
+                var entity = await _pessoaRepository.GetPessoaById(id) ??
                              throw new Exception("Registro não encotrado!");
                 responseDTO.Object = entity;
             }

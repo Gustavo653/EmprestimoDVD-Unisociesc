@@ -19,13 +19,19 @@ namespace EmprestimoDVD.Application
         private readonly IPessoaRepository _pessoaRepository;
         private readonly IGeneroRepository _generoRepository;
         private readonly IMapper _mapper;
+        private readonly IEmprestimoRepository _emprestimoRepository;
 
-        public DVDService(IDVDRepository dvdRepository, IMapper mapper, IPessoaRepository pessoaRepository, IGeneroRepository generoRepository)
+        public DVDService(IDVDRepository dvdRepository,
+                          IMapper mapper,
+                          IPessoaRepository pessoaRepository,
+                          IGeneroRepository generoRepository,
+                          IEmprestimoRepository emprestimoRepository)
         {
             _dvdRepository = dvdRepository;
             _mapper = mapper;
             _pessoaRepository = pessoaRepository;
             _generoRepository = generoRepository;
+            _emprestimoRepository = emprestimoRepository;
         }
 
         public async Task<ResponseDTO<DVD>> CreateOrUpdate(int? id, DVDDTO dto)
@@ -69,9 +75,11 @@ namespace EmprestimoDVD.Application
             ResponseDTO<DVD> responseDTO = new();
             try
             {
-                var entity = await _dvdRepository.GetEntities().Include(x => x.Genero).FirstOrDefaultAsync(x => x.Id == id) ??
+                var entity = await _dvdRepository.GetEntities().FirstOrDefaultAsync(x => x.Id == id) ??
                              throw new Exception("Registro não encotrado!");
                 responseDTO.Object = entity;
+                if (await _emprestimoRepository.GetEntities().AnyAsync(x => x.DVD == entity))
+                    throw new Exception("Este DVD já foi emprestado, e não pode ser excluído.");
                 _dvdRepository.Delete(entity);
                 await _dvdRepository.SaveChangesAsync();
             }
@@ -87,7 +95,11 @@ namespace EmprestimoDVD.Application
             ResponseDTO<IEnumerable<DVD>> responseDTO = new();
             try
             {
-                var entity = await _dvdRepository.GetListAsync();
+                var entity = await _dvdRepository.GetEntities()
+                                                 .Include(x => x.Genero)
+                                                 .Include(x => x.ArtistaPrincipal)
+                                                 .Include(x => x.Diretor)
+                                                 .ToListAsync();
                 responseDTO.Object = entity;
             }
             catch (Exception ex)
@@ -102,7 +114,11 @@ namespace EmprestimoDVD.Application
             ResponseDTO<DVD> responseDTO = new();
             try
             {
-                var entity = await _dvdRepository.GetEntities().FirstOrDefaultAsync(x => x.Id == id) ??
+                var entity = await _dvdRepository.GetEntities()
+                                                 .Include(x => x.Genero)
+                                                 .Include(x => x.ArtistaPrincipal)
+                                                 .Include(x => x.Diretor)
+                                                 .FirstOrDefaultAsync(x => x.Id == id) ??
                              throw new Exception("Registro não encotrado!");
                 responseDTO.Object = entity;
             }
