@@ -3,7 +3,6 @@ using EmprestimoDVD.Domain.Entidades;
 using EmprestimoDVD.DTO;
 using EmprestimoDVD.Infrastructure.Service;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
