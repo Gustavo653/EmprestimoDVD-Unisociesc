@@ -5,26 +5,26 @@ import { Observable } from 'rxjs';
 import { base } from '../api/base';
 
 @Injectable()
-export class BaseService<T> {
+export class BaseService<TGet, TPost> {
     constructor(
         private http: HttpClient,
         @Inject('apiUrl') private apiUrl: string
     ) {}
 
-    getAll(): Observable<base<T[]>> {
-        return this.http.get<base<T[]>>(
+    getAll(): Observable<base<TGet[]>> {
+        return this.http.get<base<TGet[]>>(
             `${environment.stringApiBase}/${this.apiUrl}/getall`
         );
     }
 
-    getById(id: number): Observable<base<T>> {
-        return this.http.get<base<T>>(
+    getById(id: number): Observable<base<TGet>> {
+        return this.http.get<base<TGet>>(
             `${environment.stringApiBase}/${this.apiUrl}/getbyid?id=${id}`
         );
     }
 
-    createOrUpdate(entity: T, id?: number): Observable<base<T>> {
-        return this.http.post<base<T>>(
+    createOrUpdate(entity: TPost, id?: number): Observable<base<TPost>> {
+        return this.http.post<base<TPost>>(
             `${environment.stringApiBase}/${this.apiUrl}/createorupdate${
                 id ? '?id=' + id : ''
             }`,
@@ -32,8 +32,8 @@ export class BaseService<T> {
         );
     }
 
-    delete(id: number): Observable<base<T>> {
-        return this.http.delete<base<T>>(
+    delete(id: number): Observable<base<TGet>> {
+        return this.http.delete<base<TGet>>(
             `${environment.stringApiBase}/${this.apiUrl}/delete?id=${id}`
         );
     }

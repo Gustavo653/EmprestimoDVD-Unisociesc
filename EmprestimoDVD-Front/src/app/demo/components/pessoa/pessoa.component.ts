@@ -61,7 +61,7 @@ export class PessoaComponent implements OnInit {
         ];
         this.fetchData();
     }
-    
+
     fetchData() {
         this.loading = true;
         this.pessoaService.getAll().subscribe(
@@ -73,6 +73,7 @@ export class PessoaComponent implements OnInit {
                     detail: `Registros carregados em: ${x.elapsed.elapsedMilliseconds}ms`,
                     life: 3000,
                 });
+                this.loading = false;
             },
             (error) => {
                 this.messageService.add({
@@ -83,9 +84,9 @@ export class PessoaComponent implements OnInit {
                     }`,
                     life: 3000,
                 });
+                this.loading = false;
             }
         );
-        this.loading = false;
     }
 
     openNew() {
@@ -100,7 +101,6 @@ export class PessoaComponent implements OnInit {
     }
 
     savePessoa() {
-        console.log(this.pessoa);
         this.submitted = true;
         if (this.pessoa.nome) {
             if (!this.pessoa.id) {

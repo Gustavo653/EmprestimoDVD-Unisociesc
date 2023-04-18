@@ -6,6 +6,7 @@ import { get } from 'lodash';
 import { Table } from 'primeng/table';
 import { amigo } from '../../api/amigo';
 import { AmigoService } from '../../service/amigo.service';
+import { TimeZoneService } from '../../service/timezone.service';
 
 @Component({
     templateUrl: './amigo.component.html',
@@ -43,7 +44,8 @@ export class AmigoComponent implements OnInit {
     constructor(
         private amigoService: AmigoService,
         private confirmationService: ConfirmationService,
-        private messageService: MessageService
+        private messageService: MessageService,
+        private timeZoneService: TimeZoneService
     ) {}
 
     ngOnInit() {
@@ -90,6 +92,7 @@ export class AmigoComponent implements OnInit {
                     detail: `Registros carregados em: ${x.elapsed.elapsedMilliseconds}ms`,
                     life: 3000,
                 });
+                this.loading = false;
             },
             (error) => {
                 this.messageService.add({
@@ -100,9 +103,9 @@ export class AmigoComponent implements OnInit {
                     }`,
                     life: 3000,
                 });
+                this.loading = false;
             }
         );
-        this.loading = false;
     }
 
     openNew() {
@@ -116,10 +119,25 @@ export class AmigoComponent implements OnInit {
         this.submitted = false;
     }
 
+    isEmailValid(email: string): boolean {
+        const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+        return emailRegex.test(email);
+    }
+
     saveAmigo() {
-        console.log(this.amigo);
         this.submitted = true;
-        if (this.amigo.nome) {
+        if (
+            this.amigo.nome &&
+            this.amigo.numTelefone &&
+            this.amigo.email &&
+            this.amigo.dataNascimento &&
+            this.isEmailValid(this.amigo.email)
+        ) {
+            this.amigo.dataNascimento = new Date(
+                this.amigo.dataNascimento.getFullYear(),
+                this.amigo.dataNascimento.getMonth(),
+                this.amigo.dataNascimento.getDate()
+            );
             if (!this.amigo.id) {
                 this.amigoService.createOrUpdate(this.amigo).subscribe(
                     (x) => {
@@ -136,7 +154,7 @@ export class AmigoComponent implements OnInit {
                         this.messageService.add({
                             severity: 'error',
                             summary: `Erro ${error.code ?? error.status}`,
-                            detail: `Não foi possível salvar seu amigo! \n Erro: ${
+                            detail: `Não foi possível salvar o registro! \n Erro: ${
                                 error.title ?? error.message
                             }`,
                             life: 3000,

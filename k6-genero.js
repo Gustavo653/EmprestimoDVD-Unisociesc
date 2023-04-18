@@ -13,7 +13,7 @@ export const options = {
 };
 
 export function generoCreate() {
-  const url = `http://localhost:3050/api/Genero/CreateOrUpdate`;
+  const url = `http://localhost:5001/api/Genero/CreateOrUpdate`;
   const names = ["João", "Maria", "Pedro", "Ana", "Lucas"];
   const randomIndex = Math.floor(Math.random() * names.length);
   const payload = {
@@ -33,7 +33,7 @@ export function generoCreate() {
 }
 
 export function generoGetAll() {
-  const url = `http://localhost:3050/api/Genero/GetAll`;
+  const url = `http://localhost:5001/api/Genero/GetAll`;
   const payload = {};
   const headers = {};
   const response = http.get(url, payload, { headers: headers });

@@ -36,6 +36,11 @@ export class AppMenuComponent implements OnInit {
                         icon: 'pi pi-fw pi-th-large',
                         routerLink: ['/genero'],
                     },
+                    {
+                        label: 'DVD',
+                        icon: 'pi pi-fw pi-tablet',
+                        routerLink: ['/dvd'],
+                    },
                 ],
             },
         ];

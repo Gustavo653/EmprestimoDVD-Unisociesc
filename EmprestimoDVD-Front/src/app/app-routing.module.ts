@@ -39,6 +39,13 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                                     './demo/components/amigo/amigo.module'
                                 ).then((m) => m.AmigoModule),
                         },
+                        {
+                            path: 'dvd',
+                            loadChildren: () =>
+                                import(
+                                    './demo/components/dvd/dvd.module'
+                                ).then((m) => m.DVDModule),
+                        },
                     ],
                 },
                 {

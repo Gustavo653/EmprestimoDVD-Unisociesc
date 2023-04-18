@@ -13,3 +13,8 @@ export interface base<T> {
         elapsedMilliseconds: number;
     };
 }
+
+export interface itemDropdown {
+    code: number;
+    name: string;
+}

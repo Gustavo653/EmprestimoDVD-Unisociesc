@@ -4,7 +4,7 @@ import { BaseService } from './base.service';
 import { genero } from '../api/genero';
 
 @Injectable()
-export class GeneroService extends BaseService<genero> {
+export class GeneroService extends BaseService<genero, genero> {
     constructor(http: HttpClient) {
         super(http, 'genero');
     }

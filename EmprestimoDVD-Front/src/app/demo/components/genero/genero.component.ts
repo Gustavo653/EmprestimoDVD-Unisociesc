@@ -71,6 +71,7 @@ export class GeneroComponent implements OnInit {
                     detail: `Registros carregados em: ${x.elapsed.elapsedMilliseconds}ms`,
                     life: 3000,
                 });
+                this.loading = false;
             },
             (error) => {
                 this.messageService.add({
@@ -81,9 +82,9 @@ export class GeneroComponent implements OnInit {
                     }`,
                     life: 3000,
                 });
+                this.loading = false;
             }
         );
-        this.loading = false;
     }
 
     openNew() {
@@ -98,7 +99,6 @@ export class GeneroComponent implements OnInit {
     }
 
     saveGenero() {
-        console.log(this.genero);
         this.submitted = true;
         if (this.genero.descricao) {
             if (!this.genero.id) {

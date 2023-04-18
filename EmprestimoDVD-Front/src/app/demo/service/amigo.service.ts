@@ -4,7 +4,7 @@ import { BaseService } from './base.service';
 import { amigo } from '../api/amigo';
 
 @Injectable()
-export class AmigoService extends BaseService<amigo> {
+export class AmigoService extends BaseService<amigo, amigo> {
     constructor(http: HttpClient) {
         super(http, 'amigo');
     }

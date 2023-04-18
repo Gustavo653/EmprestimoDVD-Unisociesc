@@ -7,6 +7,8 @@ import { NotfoundComponent } from './demo/components/notfound/notfound.component
 import { PessoaService } from './demo/service/pessoa.service';
 import { GeneroService } from './demo/service/genero.service';
 import { AmigoService } from './demo/service/amigo.service';
+import { DVDService } from './demo/service/dvd.service';
+import { TimeZoneService } from './demo/service/timezone.service';
 
 @NgModule({
     declarations: [AppComponent, NotfoundComponent],
@@ -15,7 +17,9 @@ import { AmigoService } from './demo/service/amigo.service';
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         PessoaService,
         GeneroService,
-        AmigoService
+        AmigoService,
+        DVDService,
+        TimeZoneService
     ],
     bootstrap: [AppComponent],
 })

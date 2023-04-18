@@ -2,75 +2,104 @@
 <p-confirmDialog></p-confirmDialog>
 
 <p-dialog
-    [(visible)]="amigoDialog"
-    header="Detalhes do amigo"
+    [(visible)]="dvdDialog"
+    header="Detalhes do DVD"
     [transitionOptions]="'100ms'"
-    [breakpoints]="{ '960px': '75vw', '640px': '100vw' }"
-    [style]="{ width: '30vw' }"
     [modal]="true"
     styleClass="p-fluid"
 >
     <ng-template pTemplate="content">
         <div class="field">
-            <label for="nome">Nome</label>
+            <label for="titulo">Título</label>
             <input
                 type="text"
                 pInputText
-                id="nome"
-                [(ngModel)]="amigo.nome"
+                id="titulo"
+                [(ngModel)]="dvd.titulo"
                 required
                 autofocus
             />
-            <small class="p-error" *ngIf="submitted && !amigo.nome"
-                >Nome é obrigatório.</small
+            <small class="p-error" *ngIf="submitted && !dvd.titulo"
+                >Título é obrigatório.</small
             >
         </div>
         <div class="field">
-            <label for="numTelefone">Número Telefone</label>
+            <label for="sinopse">Sinopse</label>
+            <input
+                type="text"
+                pInputText
+                id="sinopse"
+                [(ngModel)]="dvd.sinopse"
+                required
+                autofocus
+            />
+            <small class="p-error" *ngIf="submitted && !dvd.sinopse"
+                >Sinopse é obrigatório.</small
+            >
+        </div>
+        <div class="field">
+            <label for="idadeMinima">Idade Mínima</label>
             <input
                 type="number"
                 pInputText
-                id="numTelefone"
-                [(ngModel)]="amigo.numTelefone"
+                id="idadeMinima"
+                [(ngModel)]="dvd.idadeMinima"
                 required
                 autofocus
             />
-            <small class="p-error" *ngIf="submitted && !amigo.numTelefone"
-                >Número Telefone é obrigatório.</small
+            <small class="p-error" *ngIf="submitted && !dvd.idadeMinima"
+                >Idade Mínima é obrigatório.</small
             >
         </div>
         <div class="field">
-            <label for="email">E-mail</label>
-            <input
-                type="email"
-                pInputText
-                id="email"
-                name="email"
-                [(ngModel)]="amigo.email"
-                required
-                autofocus
-            />
-            <small class="p-error" *ngIf="submitted && !amigo.email"
-                >E-mail é obrigatório.</small
+            <label for="idDiretor">Diretor</label>
+            <p-dropdown
+                [options]="pessoas"
+                appendTo="body"
+                [(ngModel)]="dvd.idDiretor"
+                [filter]="true"
+                filterBy="name"
+                optionValue="code"
+                optionLabel="name"
+                [showClear]="false"
+                placeholder="Selecione um Diretor"
+            ></p-dropdown>
+            <small class="p-error" *ngIf="submitted && !dvd.idDiretor"
+                >Diretor é obrigatório.</small
             >
-            <small
-                class="p-error"
-                *ngIf="submitted && amigo.email && !isEmailValid(amigo.email)"
-            >
-                E-mail inválido.
-            </small>
         </div>
         <div class="field">
-            <label for="dataNascimento">Data Nascimento</label>
-            <p-calendar
-                name="dataNascimento"
-                dateFormat="dd/mm/yy"
-                [inline]="true"
-                [(ngModel)]="amigo.dataNascimento"
+            <label for="idGenero">Gênero</label>
+            <p-dropdown
+                [options]="generos"
+                appendTo="body"
+                [(ngModel)]="dvd.idGenero"
+                [filter]="true"
+                filterBy="name"
+                optionValue="code"
+                optionLabel="name"
+                [showClear]="false"
+                placeholder="Selecione um Gênero"
+            ></p-dropdown>
+            <small class="p-error" *ngIf="submitted && !dvd.idGenero"
+                >Gênero é obrigatório.</small
             >
-            </p-calendar>
-            <small class="p-error" *ngIf="submitted && !amigo.dataNascimento"
-                >Data Nascimento é obrigatório.</small
+        </div>
+        <div class="field">
+            <label for="idArtistaPrincipal">Artista Principal</label>
+            <p-dropdown
+                [options]="pessoas"
+                appendTo="body"
+                [(ngModel)]="dvd.idArtistaPrincipal"
+                [filter]="true"
+                filterBy="name"
+                optionValue="code"
+                optionLabel="name"
+                [showClear]="false"
+                placeholder="Selecione um Artista Principal"
+            ></p-dropdown>
+            <small class="p-error" *ngIf="submitted && !dvd.idArtistaPrincipal"
+                >Artista Principal é obrigatório.</small
             >
         </div>
     </ng-template>
@@ -90,7 +119,7 @@
             label="Salvar"
             icon="pi pi-check"
             class="p-button-text"
-            (click)="saveAmigo()"
+            (click)="saveDVD()"
         ></button>
     </ng-template>
 </p-dialog>
@@ -110,7 +139,7 @@
                     ></button>
                 </ng-template>
                 <ng-template pTemplate="right">
-                    <h5>Amigo</h5>
+                    <h5>DVD</h5>
                 </ng-template>
             </p-toolbar>
 
@@ -126,12 +155,20 @@
                 styleClass="p-datatable-gridlines"
                 [paginator]="true"
                 [columns]="cols"
-                [value]="amigos"
+                [value]="dvds"
                 [resizableColumns]="true"
                 columnResizeMode="expand"
                 scrollHeight="flex"
                 responsiveLayout="stack"
-                [globalFilterFields]="['nome']"
+                [globalFilterFields]="[
+                    'id',
+                    'titulo',
+                    'sinopse',
+                    'idadeMinima',
+                    'artistaPrincipal.nome',
+                    'diretor.nome',
+                    'genero.descricao'
+                ]"
             >
                 <ng-template pTemplate="caption">
                     <div
@@ -200,14 +237,14 @@
                                     pRipple
                                     icon="pi pi-pencil"
                                     class="p-button-rounded p-button-warning"
-                                    (click)="editAmigo(rowData)"
+                                    (click)="editDVD(rowData)"
                                 ></button>
                                 <button
                                     pButton
                                     pRipple
                                     icon="pi pi-trash"
                                     class="p-button-rounded p-button-danger"
-                                    (click)="deleteAmigo(rowData)"
+                                    (click)="deleteDVD(rowData)"
                                 ></button>
                             </div>
                         </td>
