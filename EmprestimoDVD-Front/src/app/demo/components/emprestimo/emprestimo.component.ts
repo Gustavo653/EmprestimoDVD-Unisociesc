@@ -29,8 +29,10 @@ import { AmigoService } from '../../service/amigo.service';
 })
 export class EmprestimoComponent implements OnInit {
     dvds: any[] = [];
+    historico: any[] = [];
     loading: boolean = false;
     cols: any[] = [];
+    colsHistorico: any[] = [];
 
     emprestimoDialog: boolean = false;
     submitted: boolean = false;
@@ -92,6 +94,32 @@ export class EmprestimoComponent implements OnInit {
                 type: 'text',
             },
         ];
+        this.colsHistorico = [
+            {
+                field: 'titulo',
+                header: 'Título',
+                type: 'text',
+            },
+            {
+                field: 'amigo',
+                header: 'Amigo',
+                type: 'text',
+            },
+            {
+                field: 'dataEmprestimo',
+                header: 'Data Empréstimo',
+                type: 'date',
+                date: true,
+                format: `dd/MM/yyyy HH:mm:ss`,
+            },
+            {
+                field: 'dataDevolver',
+                header: 'Data Devolver',
+                type: 'date',
+                date: true,
+                format: `dd/MM/yyyy HH:mm:ss`,
+            },
+        ];
         this.fetchData();
     }
 
@@ -112,6 +140,27 @@ export class EmprestimoComponent implements OnInit {
                 this.messageService.add({
                     severity: 'success',
                     summary: `DVDs carregados!`,
+                    detail: `Registros carregados em: ${x.elapsed.elapsedMilliseconds}ms`,
+                    life: 3000,
+                });
+                this.loading = false;
+            },
+            (error) => {
+                this.messageService.add({
+                    severity: 'error',
+                    summary: `Erro ${error.error.code}`,
+                    detail: `Não foi possível obter os registros! \n Erro: ${error.error.error.message}`,
+                    life: 3000,
+                });
+                this.loading = false;
+            }
+        );
+        this.emprestimoService.historicoEmprestimo().subscribe(
+            (x) => {
+                this.historico = x.object;
+                this.messageService.add({
+                    severity: 'success',
+                    summary: `Histórico carregado!`,
                     detail: `Registros carregados em: ${x.elapsed.elapsedMilliseconds}ms`,
                     life: 3000,
                 });

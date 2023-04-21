@@ -16,6 +16,12 @@ export class EmprestimoService {
         );
     }
 
+    historicoEmprestimo(): Observable<base<any>> {
+        return this.http.get<base<any>>(
+            `${environment.stringApiBase}/emprestimo/HistoricoEmprestimo`
+        );
+    }
+
     emprestaDVD(idDVD: number, idAmigo: number): Observable<base<any>> {
         return this.http.post<base<any>>(
             `${environment.stringApiBase}/emprestimo/EmprestaDVD`,

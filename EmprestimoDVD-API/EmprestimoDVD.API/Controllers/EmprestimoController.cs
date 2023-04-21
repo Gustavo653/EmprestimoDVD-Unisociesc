@@ -18,11 +18,11 @@ namespace EmprestimoDVD.API.Controllers
             _emprestimoService = emprestimoService;
         }
 
-        [HttpPost("HistoricoEmprestimo")]
-        [Produces(typeof(ResponseDTO<List<Emprestimo>>))]
-        public async Task<IActionResult> HistoricoEmprestimo([FromBody] EmprestimoDVDDTO emprestimoDVDDTO)
+        [HttpGet("HistoricoEmprestimo")]
+        [Produces(typeof(ResponseDTO<List<DVDEmprestadoDTO>>))]
+        public async Task<IActionResult> HistoricoEmprestimo()
         {
-            var data = await _emprestimoService.HistoricoEmprestimo(emprestimoDVDDTO);
+            var data = await _emprestimoService.HistoricoEmprestimo();
             return StatusCode(data.Code, data);
         }
 

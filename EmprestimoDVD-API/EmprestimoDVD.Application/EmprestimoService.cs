@@ -106,14 +106,21 @@ namespace EmprestimoDVD.Application
             return responseDTO;
         }
 
-        public async Task<ResponseDTO<List<Emprestimo>>> HistoricoEmprestimo(EmprestimoDVDDTO emprestimoDVDDTO)
+        public async Task<ResponseDTO<List<DVDEmprestadoDTO>>> HistoricoEmprestimo()
         {
-            ResponseDTO<List<Emprestimo>> responseDTO = new();
+            ResponseDTO<List<DVDEmprestadoDTO>> responseDTO = new();
             try
             {
-                var dvd = await _DVDRepository.GetEntities().FirstOrDefaultAsync(x => x.Id == emprestimoDVDDTO.IdDVD) ?? throw new Exception("DVD não encontrado!");
-                var historico = await _emprestimoRepository.GetEntities().Include(x => x.DVD).Include(x => x.Amigo).Where(x => x.DVD == dvd).ToListAsync();
-                responseDTO.Object = historico;
+                var data = await _emprestimoRepository.GetEntities().OrderByDescending(x => x.Id).Select(x => new DVDEmprestadoDTO
+                {
+                    Id = x.Id,
+                    Titulo = x.DVD.Titulo,
+                    Amigo = x.Amigo.Nome,
+                    DataDevolver = x.DataDevolver,
+                    DataEmprestimo = x.DataEmprestimo
+                }).ToListAsync();
+
+                responseDTO.Object = data;
             }
             catch (Exception ex)
             {
