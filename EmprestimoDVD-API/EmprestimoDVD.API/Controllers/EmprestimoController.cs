@@ -26,9 +26,17 @@ namespace EmprestimoDVD.API.Controllers
             return StatusCode(data.Code, data);
         }
 
+        [HttpGet("BuscaDVDEmprestimo")]
+        [Produces(typeof(ResponseDTO<List<DVDEmprestadoDTO>>))]
+        public async Task<IActionResult> BuscaDVDEmprestimo()
+        {
+            var data = await _emprestimoService.BuscaDVDEmprestimo();
+            return StatusCode(data.Code, data);
+        }
+
         [HttpPost("EmprestaDVD")]
         [Produces(typeof(ResponseDTO<Emprestimo>))]
-        public async Task<IActionResult> EmprestaDVD([FromBody]  EmprestimoAmigoDTO emprestimoAmigoDTO)
+        public async Task<IActionResult> EmprestaDVD([FromBody] EmprestimoAmigoDTO emprestimoAmigoDTO)
         {
             var data = await _emprestimoService.EmprestaDVD(emprestimoAmigoDTO);
             return StatusCode(data.Code, data);

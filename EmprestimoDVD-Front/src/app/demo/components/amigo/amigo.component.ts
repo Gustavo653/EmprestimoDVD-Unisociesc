@@ -6,7 +6,6 @@ import { get } from 'lodash';
 import { Table } from 'primeng/table';
 import { amigo } from '../../api/amigo';
 import { AmigoService } from '../../service/amigo.service';
-import { TimeZoneService } from '../../service/timezone.service';
 
 @Component({
     templateUrl: './amigo.component.html',
@@ -44,8 +43,7 @@ export class AmigoComponent implements OnInit {
     constructor(
         private amigoService: AmigoService,
         private confirmationService: ConfirmationService,
-        private messageService: MessageService,
-        private timeZoneService: TimeZoneService
+        private messageService: MessageService
     ) {}
 
     ngOnInit() {
@@ -71,11 +69,16 @@ export class AmigoComponent implements OnInit {
                 type: 'text',
             },
             {
+                field: 'endereco',
+                header: 'Endereço',
+                type: 'text',
+            },
+            {
                 field: 'dataNascimento',
                 header: 'Data Nascimento',
                 type: 'date',
                 date: true,
-                format: `dd/MM/yyyy HH:mm:ss`,
+                format: `dd/MM/yyyy`,
             },
         ];
         this.fetchData();
@@ -97,9 +100,9 @@ export class AmigoComponent implements OnInit {
             (error) => {
                 this.messageService.add({
                     severity: 'error',
-                    summary: `Erro ${error.code ?? error.status}`,
+                    summary: `Erro ${error.error.code}`,
                     detail: `Não foi possível obter os registros! \n Erro: ${
-                        error.title ?? error.message
+                        error.error.error.message
                     }`,
                     life: 3000,
                 });
@@ -153,9 +156,9 @@ export class AmigoComponent implements OnInit {
                     (error) => {
                         this.messageService.add({
                             severity: 'error',
-                            summary: `Erro ${error.code ?? error.status}`,
+                            summary: `Erro ${error.error.code}`,
                             detail: `Não foi possível salvar o registro! \n Erro: ${
-                                error.title ?? error.message
+                                error.error.error.message
                             }`,
                             life: 3000,
                         });
@@ -178,9 +181,9 @@ export class AmigoComponent implements OnInit {
                         (error) => {
                             this.messageService.add({
                                 severity: 'error',
-                                summary: `Erro ${error.code ?? error.status}`,
+                                summary: `Erro ${error.error.code}`,
                                 detail: `Não foi possível atualizar o registro! \n Erro: ${
-                                    error.title ?? error.message
+                                    error.error.error.message
                                 }`,
                                 life: 3000,
                             });
@@ -219,9 +222,9 @@ export class AmigoComponent implements OnInit {
                     (error) => {
                         this.messageService.add({
                             severity: 'error',
-                            summary: `Erro ${error.code ?? error.status}`,
+                            summary: `Erro ${error.error.code}`,
                             detail: `Não foi possível excluir o registro! \n Erro: ${
-                                error.title ?? error.message
+                                error.error.error.message
                             }`,
                             life: 3000,
                         });

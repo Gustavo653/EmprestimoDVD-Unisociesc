@@ -1,4 +1,6 @@
-﻿namespace EmprestimoDVD.Domain.Entidades
+﻿using System.Collections.Generic;
+
+namespace EmprestimoDVD.Domain.Entidades
 {
     public class DVD : BaseEntity
     {
@@ -8,5 +10,6 @@
         public Pessoa ArtistaPrincipal { get; set; }
         public Pessoa Diretor { get; set; }
         public Genero Genero { get; set; }
+        public List<Emprestimo> Emprestimos { get; set; }
     }
 }

@@ -12,13 +12,15 @@ import { SliderModule } from 'primeng/slider';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { EmprestimoRoutingModule } from './emprestimo-routing.module';
+import { EmprestimoComponent } from './emprestimo.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
     imports: [
         CommonModule,
-        DashboardRoutingModule,
+        EmprestimoRoutingModule,
         FormsModule,
         TableModule,
         RatingModule,
@@ -31,7 +33,9 @@ import { DashboardComponent } from './dashboard.component';
         DropdownModule,
         ProgressBarModule,
         ToastModule,
+        ConfirmDialogModule,
+        DialogModule
     ],
-    declarations: [DashboardComponent],
+    declarations: [EmprestimoComponent],
 })
-export class DashboardModule {}
+export class EmprestimoModule {}

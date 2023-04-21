@@ -8,7 +8,7 @@ import { PessoaService } from './demo/service/pessoa.service';
 import { GeneroService } from './demo/service/genero.service';
 import { AmigoService } from './demo/service/amigo.service';
 import { DVDService } from './demo/service/dvd.service';
-import { TimeZoneService } from './demo/service/timezone.service';
+import { EmprestimoService } from './demo/service/emprestimo.service';
 
 @NgModule({
     declarations: [AppComponent, NotfoundComponent],
@@ -19,7 +19,7 @@ import { TimeZoneService } from './demo/service/timezone.service';
         GeneroService,
         AmigoService,
         DVDService,
-        TimeZoneService
+        EmprestimoService,
     ],
     bootstrap: [AppComponent],
 })

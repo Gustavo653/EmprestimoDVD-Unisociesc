@@ -76,9 +76,9 @@ export class GeneroComponent implements OnInit {
             (error) => {
                 this.messageService.add({
                     severity: 'error',
-                    summary: `Erro ${error.code ?? error.status}`,
+                    summary: `Erro ${error.error.code}`,
                     detail: `Não foi possível obter os registros! \n Erro: ${
-                        error.title ?? error.message
+                        error.error.error.message
                     }`,
                     life: 3000,
                 });
@@ -116,9 +116,9 @@ export class GeneroComponent implements OnInit {
                     (error) => {
                         this.messageService.add({
                             severity: 'error',
-                            summary: `Erro ${error.code ?? error.status}`,
+                            summary: `Erro ${error.error.code}`,
                             detail: `Não foi possível salvar seu genero! \n Erro: ${
-                                error.title ?? error.message
+                                error.error.error.message
                             }`,
                             life: 3000,
                         });
@@ -141,9 +141,9 @@ export class GeneroComponent implements OnInit {
                         (error) => {
                             this.messageService.add({
                                 severity: 'error',
-                                summary: `Erro ${error.code ?? error.status}`,
+                                summary: `Erro ${error.error.code}`,
                                 detail: `Não foi possível atualizar o registro! \n Erro: ${
-                                    error.title ?? error.message
+                                    error.error.error.message
                                 }`,
                                 life: 3000,
                             });
@@ -178,9 +178,9 @@ export class GeneroComponent implements OnInit {
                     (error) => {
                         this.messageService.add({
                             severity: 'error',
-                            summary: `Erro ${error.code ?? error.status}`,
+                            summary: `Erro ${error.error.code}`,
                             detail: `Não foi possível excluir o registro! \n Erro: ${
-                                error.title ?? error.message
+                                error.error.error.message
                             }`,
                             life: 3000,
                         });

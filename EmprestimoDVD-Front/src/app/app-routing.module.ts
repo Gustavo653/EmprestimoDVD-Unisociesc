@@ -15,8 +15,8 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                             path: '',
                             loadChildren: () =>
                                 import(
-                                    './demo/components/dashboard/dashboard.module'
-                                ).then((m) => m.DashboardModule),
+                                    './demo/components/emprestimo/emprestimo.module'
+                                ).then((m) => m.EmprestimoModule),
                         },
                         {
                             path: 'pessoa',

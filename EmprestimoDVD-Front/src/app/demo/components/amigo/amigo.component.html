@@ -26,6 +26,20 @@
             >
         </div>
         <div class="field">
+            <label for="endereco">Endereço</label>
+            <input
+                type="text"
+                pInputText
+                id="endereco"
+                [(ngModel)]="amigo.endereco"
+                required
+                autofocus
+            />
+            <small class="p-error" *ngIf="submitted && !amigo.endereco"
+                >Endereço é obrigatório.</small
+            >
+        </div>
+        <div class="field">
             <label for="numTelefone">Número Telefone</label>
             <input
                 type="number"
@@ -131,7 +145,13 @@
                 columnResizeMode="expand"
                 scrollHeight="flex"
                 responsiveLayout="stack"
-                [globalFilterFields]="['nome']"
+                [globalFilterFields]="[
+                    'nome',
+                    'email',
+                    'endereco',
+                    'numTelefone',
+                    'dataNascimento'
+                ]"
             >
                 <ng-template pTemplate="caption">
                     <div

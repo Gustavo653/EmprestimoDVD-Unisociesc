@@ -27,6 +27,32 @@ namespace EmprestimoDVD.Application
             _emprestimoRepository = emprestimoRepository;
         }
 
+        public async Task<ResponseDTO<List<DVDEmprestadoDTO>>> BuscaDVDEmprestimo()
+        {
+            ResponseDTO<List<DVDEmprestadoDTO>> responseDTO = new();
+            try
+            {
+                var data = await _DVDRepository.GetEntities().Select(x => new DVDEmprestadoDTO
+                {
+                    Id = x.Id,
+                    Genero = x.Genero,
+                    ArtistaPrincipal = x.ArtistaPrincipal,
+                    Diretor = x.Diretor,
+                    Sinopse = x.Sinopse,
+                    Titulo = x.Titulo,
+                    IdadeMinima = x.IdadeMinima,
+                    Amigo = x.Emprestimos.OrderByDescending(x => x.DataEmprestimo).FirstOrDefault(z => z.DVD.Id == x.Id && z.DataDevolver == null).Amigo.Nome
+                }).ToListAsync();
+
+                responseDTO.Object = data;
+            }
+            catch (Exception ex)
+            {
+                responseDTO.SetError(ex);
+            }
+            return responseDTO;
+        }
+
         public async Task<ResponseDTO<Emprestimo>> DevolveDVD(EmprestimoDVDDTO emprestimoDVDDTO)
         {
             ResponseDTO<Emprestimo> responseDTO = new();

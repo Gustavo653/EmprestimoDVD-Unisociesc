@@ -15,5 +15,6 @@ namespace EmprestimoDVD.Infrastructure.Service
         Task<ResponseDTO<Emprestimo>> EmprestaDVD(EmprestimoAmigoDTO emprestimoAmigoDTO);
         Task<ResponseDTO<Emprestimo>> DevolveDVD(EmprestimoDVDDTO emprestimoDVDDTO);
         Task<ResponseDTO<List<Emprestimo>>> HistoricoEmprestimo(EmprestimoDVDDTO emprestimoDVDDTO);
+        Task<ResponseDTO<List<DVDEmprestadoDTO>>> BuscaDVDEmprestimo();
     }
 }
